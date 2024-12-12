@@ -56,6 +56,61 @@ m =
 ```bash
 >>x = 2 - 3
 >>x 
+```## MATLAB (MATrix LABoratory)
+### para multiplicar dois números : 
+```bash
+>> 3 * 5
+```
+
+```bash
+(>>) representa o prompt onde estou digitando
+```
+### o resultado é armazenado na variável ans
+```bash
+>> 3 * 5
+
+ans =
+
+    15
+```
+
+```bash
+(=)  é o operador de atribuição 
+```
+
+### posso armazenar o resultado em uma variável 
+```bash
+>>m = 3 * 5
+```
+
+```bash
+>> m = 3 * 5
+
+m = 
+
+    15
+```
+### posso fazer operações com a minha variável 
+```bash
+>> m = m + 1
+
+m = 
+
+    16
+```
+
+### Workspace onde posso ver todas as variáveis criadas 
+
+![opa](workspace.jpg)
+
+### Para apenas armazenar o valor da operação basta
+```bash
+>>x = 2 - 3
+```
+
+```bash
+>>x = 2 - 3
+>>x 
 ```
 ### Saída do programa
 ```bash
@@ -259,4 +314,67 @@ A =
    7   8
 
 ans = 6
+```
+
+#### Quando usamos como um índice, o operador dois pontos (:) especifica todos os elementos naquela dimensão. Por exemplo, o código a seguir cria um vetor de coluna contendo todos os elementos da primeira coluna de A.
+```bash 
+A = [3 1 4; 5 7 8]
+
+x = A(:,1)
+```
+```bash
+A =
+
+   3   1   4
+   5   7   8
+
+x =
+   3
+   5
+```
+
+### podemos usar o operador dois pontos para especificar um intervalo de valores.  código a seguir cria uma matriz contendo a primeira, segunda e terceira linhas da matriz A.
+```bash 
+x = [1 2 3;5 6 7; 10 11 12; 15 17 18]
+
+y= x(1:2,:)
+
+```
+
+```bash 
+x =
+
+    1    2    3
+    5    6    7
+   10   11   12
+   15   17   18
+
+y =
+
+   1   2   3
+   5   6   7
+```
+
+### se quisermos pegar as duas últimas colunas 
+```bash 
+x = [1 2 3;5 6 7; 10 11 12; 15 17 18]
+
+y= x(:,2:3)
+
+```
+
+```bash 
+x =
+
+    1    2    3
+    5    6    7
+   10   11   12
+   15   17   18
+
+y =
+
+    2    3
+    6    7
+   11   12
+   17   18
 ```
