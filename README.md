@@ -2,61 +2,12 @@
 MATLAB é uma ferramenta e uma linguagem de programação de alto nível, e tem como principais funções: construção de gráficos e compilação de funções, manipulação de funções específicas de cálculo e variáveis simbólicas. 
 
 
-### para multiplicar dois números : 
+### comentários
 ```bash
->> 3 * 5
+
+%este é o simbolo para comentar um código 
 ```
 
-```bash
-(>>) representa o prompt onde estou digitando
-```
-### o resultado é armazenado na variável ans
-```bash
->> 3 * 5
-
-ans =
-
-    15
-```
-
-```bash
-(=)  é o operador de atribuição 
-```
-
-### posso armazenar o resultado em uma variável 
-```bash
->>m = 3 * 5
-```
-
-```bash
->> m = 3 * 5
-
-m = 
-
-    15
-```
-### posso fazer operações com a minha variável 
-```bash
->> m = m + 1
-
-m = 
-
-    16
-```
-
-### Workspace onde posso ver todas as variáveis criadas 
-
-![opa](workspace.jpg)
-
-### Para apenas armazenar o valor da operação basta
-```bash
->>x = 2 - 3
-```
-
-```bash
->>x = 2 - 3
->>x 
-```## MATLAB (MATrix LABoratory)
 ### para multiplicar dois números : 
 ```bash
 >> 3 * 5
@@ -377,4 +328,288 @@ y =
     6    7
    11   12
    17   18
+```
+
+### Para indexar em um vetor, use um único valor de índice. Por exemplo, o código a seguir retorna o terceiro elemento do vetor de linha ou coluna v.
+ 
+```bash 
+x = [3 4 5; 8 9 0; 12 13 14]
+
+y = x(3)
+```
+
+```bash 
+x =
+
+    3    4    5
+    8    9    0
+   12   13   14
+
+y = 12
+
+[Execution complete with exit code 0]
+```
+
+#### perceba que é como fazer o codigo
+```bash 
+x = [3 4 5; 8 9 0; 12 13 14]
+
+y = x(3,1)
+
+%y = x(3) é a mesma coisa que y= x(3,1)
+ambos buscam o elemento da terceira linha e primeira coluna
+```
+
+### podemos usar um único intervalo de valores de índice para referenciar vários elementos de vetor. Por exemplo, o código a seguir retorna um subconjunto do vetor v contendo os elementos do índice 3 até o fim.
+
+```bash 
+x = [3 4 5; 8 9 0; 12 13 14]
+
+y = x(2:end)
+```
+
+
+```bash 
+x =
+
+    3    4    5
+    8    9    0
+   12   13   14
+
+y =
+
+    8   12    4    9   13    5    0   14
+
+
+[Execution complete with exit code 0]
+```
+
+### no lugar da palavra - chave "end", poderia colocar o valor de até onde vai o meu intervalo
+
+
+### Podemos alterar os elementos em um vetor combinando indexação com atribuição. O código a seguir altera o segundo elemento de X para 1000.
+```bash 
+x = [3 4 5; 8 9 0; 12 13 14]
+
+x(2) = 1000
+
+```
+
+```bash 
+x =
+
+    3    4    5
+    8    9    0
+   12   13   14
+
+x =
+
+      3      4      5
+   1000      9      0
+     12     13     14
+
+
+[Execution complete with exit code 0]
+```
+
+### podemos também usar indexação para alterar os elementos em uma matriz.
+```bash 
+x = [3 4 5; 8 9 0; 12 13 14]
+
+x(2,3) = 1000
+```
+
+```bash
+x =
+
+    3    4    5
+    8    9    0
+   12   13   14
+
+x =
+
+      3      4      5
+      8      9   1000
+     12     13     14
+
+
+[Execution complete with exit code 0]
+```
+
+#### podemos combinar indexação com atribuição para alterar elementos de array para outros elementos. Por exemplo:
+```bash 
+x = [3 4 5; 8 9 0; 12 13 14]
+
+x(2,3) = x(1,1)
+```
+```bash 
+x =
+
+    3    4    5
+    8    9    0
+   12   13   14
+
+x =
+
+    3    4    5
+    8    9    3
+   12   13   14
+
+
+[Execution complete with exit code 0]
+```
+
+### podemos adicionar um valor escalar a todos os elementos de um array.
+```bash 
+x = [3 4 5; 8 9 0; 12 13 14]
+
+y = x + 1
+```
+
+```bash
+x =
+
+    3    4    5
+    8    9    0
+   12   13   14
+
+y =
+
+    4    5    6
+    9   10    1
+   13   14   15
+```
+
+### podemos somar quaisquer duas matrizes do mesmo tamanho.
+```bash 
+x = [1 2 3]
+
+y = [4 5 6 ]
+
+z = x + y
+```
+```bash 
+x =
+
+   1   2   3
+
+y =
+
+   4   5   6
+
+z =
+
+   5   7   9
+
+```
+### podemos multiplicar ou dividir cada elemento da matriz por um escalar
+
+```bash 
+x = [4 6 8]
+
+y = x/2
+
+z = x * 2
+```
+
+```bash 
+x =
+
+   4   6   8
+
+y =
+
+   2   3   4
+
+z =
+
+    8   12   16
+```
+
+### podemos aplicar funções básicas do MATLAB de estatística em um vetor. Po exemplo, o valor máximo de um vetor pode ser determinado usando a função max: 
+
+```bash 
+x = [4 6 8]
+
+y = max(x)
+```
+```bash 
+x =
+
+   4   6   8
+
+y = 8
+
+```
+
+### podemos utilizar uma função(sqrt()) que nos permite calcular a raiz quadrada de cada um dos elementos de um vetor 
+```bash 
+x = [4 9 16]
+
+y = sqrt(x)
+```
+
+```bash 
+x =
+
+    4    9   16
+
+y =
+
+   2   3   4
+```
+
+### A função round() nos permite arredontar os valores de um vetor para um inteiro mais próximo
+
+```bash
+l = [4.6]
+y = round(l)
+```
+
+```bash
+l = 4.6000
+y = 5
+```
+
+### AO usarmos o operador * realiza-se a multiplicação de matrizes. Então, se usarmos * para multiplicar dois vetores de tamanhos iguais, temos uma mensagem de erro porque as dimensões internas não concordam.
+```bash 
+Error using  * 
+Incorrect dimensions for matrix 
+multiplication. 
+```
+
+#### O operador .* realiza a multiplicação elemento a elemento multiplicando os elementos correspondentes de duas matrizes de tamanhos iguais.
+```bash
+x = [1 2 3]
+y = [4 5 6]
+
+x .* y
+```
+```bash
+x =
+
+   1   2   3
+
+y =
+
+   4   5   6
+
+ans =
+
+    4   10   18
+```
+
+### Existem outros tamanhos compatíveis. Por exemplo, tente:
+```bash
+x = [1 2; 3 4; 5 6; 7 8].*[1;2;3;4]
+```
+
+```bash
+x =
+
+    1    2
+    6    8
+   15   18
+   28   32
+
 ```
